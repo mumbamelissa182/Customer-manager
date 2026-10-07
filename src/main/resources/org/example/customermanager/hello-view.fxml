@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" spacing="15.0"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="org.example.customermanager.HelloController">
+
+    <Label text="Customer Manager"/>
+
+    <TextField fx:id="customerName"
+               promptText="Customer Name"/>
+
+    <ComboBox fx:id="province"
+              promptText="Choose Province"/>
+
+    <Button text="Save Customer"
+            onAction="#onSaveCustomerClick"/>
+
+    <Button text="Delete Customer"
+            onAction="#onDeleteCustomerClick"/>
+
+    <TableView fx:id="customerTable">
+        <columns>
+            <TableColumn text="Customer"/>
+            <TableColumn text="Province"/>
+        </columns>
+    </TableView>
+
+</VBox>
